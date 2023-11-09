@@ -69,7 +69,7 @@ function App() {
                 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 onClick={() => swap()}>
                   <img 
-                  src="src/assets/swap.png" 
+                  src="https://i.imgur.com/pMLBhaM.png" 
                   alt="Swap" 
                   className="w-10 h-10"
                   />
