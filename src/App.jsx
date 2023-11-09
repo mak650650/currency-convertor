@@ -11,7 +11,7 @@ function App() {
   const [from , setFrom] = useState('jpy');
   const [to , setTo] = useState('inr');
 
-  const currencyInfo = useCallback(()=>useCurrencyInfo(from),[from, amount])
+  const currencyInfo = useCurrencyInfo(from)
 
   const option = Object.keys(currencyInfo);
 
