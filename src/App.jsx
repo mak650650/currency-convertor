@@ -33,10 +33,10 @@ function App() {
     setAmount(convertedAmount)
     setConvertedAmount(amount)
   }
- 
-  useEffect(()=>{
+ //convert
+  const convert = ()=>{
     setConvertedAmount(amount * currencyInfo[to])
-  } ,[from ,to ,swap])
+  }
  
   return (
     <>
@@ -90,7 +90,7 @@ function App() {
               className='w-full'/>
               </div>  
               <div><button className="rounded-3xl transition ease-in-out delay-150 hover:bg-purple-200 hover:-translate-y-1 hover:scale-110 bg-purple-300 px-10 py-5 text-gray-700 duration-300"
-              onClick={()=>  setConvertedAmount(amount * currencyInfo[to])}>Convert from 
+              onClick={()=> convert()}>Convert from 
               <span className="text-black mx-1 hover:text-violet-700">{from.toUpperCase()} </span>
               to  
               <span className="text-black mx-1 hover:text-violet-700">{to.toUpperCase()}</span>
