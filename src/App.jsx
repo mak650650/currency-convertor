@@ -10,11 +10,6 @@ function App() {
   const [convertedAmount , setConvertedAmount] = useState(0);
   const [from , setFrom] = useState('jpy');
   const [to , setTo] = useState('inr');
-
-  useEffect(()=>{
-    setFrom(from)
-    setTo(to)
-  },[window])
   
   const currencyInfo = useCurrencyInfo(from)
 
@@ -44,11 +39,11 @@ function App() {
   return (
     <>
     <div className="w-full  h-screen bg-no-repeat bg-cover bg-center bg-[url('/src/assets/bg.png')]">
-       NAVBAR 
+  
       <div className="bg-transparent  text-white flex columns-1">
         <Navbar />
       </div>
-      HEAD
+
       <div className="text-white flex-col justify-center text-center mt-20 ">
         <div>
           <h1 className="text-5xl mb-5 max-[1200px]:text-4xl">Free Currency Conversion <span className="text-purple-600">APP</span></h1>
@@ -56,7 +51,7 @@ function App() {
           </span>
         </div>
         <div className="my-16 flex justify-center">
-          <div className="rounded-xl  py-5 px-2 flex flex-col justify-center gap-5 shadow-md  bg-slate-300 max-[1200px]:flex-col">  
+          <div className="rounded-xl  py-5 px-2 flex flex-col justify-center gap-5 shadow-md  bg-slate-400 max-[1200px]:flex-col">  
           <div className="flex  max-[1200px]:flex-col gap-5">        
             <Inputbox 
               label='From' 
@@ -72,7 +67,7 @@ function App() {
             
               <div className="max-[1200px]:flex max-[1200px]:justify-center  max-[1200px]:mt-0 transition-all">
                 <button className="rounded-3xl bg-purple-300 hover:bg-purple-200 text-black p-2 flex-col py-8 max-[1200px]:px-14 max-[1200px]:py-2  
-                transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
                 onClick={() => swap()}>
                   <img 
                   src="https://i.imgur.com/pMLBhaM.png" 
