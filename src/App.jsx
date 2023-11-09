@@ -11,6 +11,11 @@ function App() {
   const [from , setFrom] = useState('jpy');
   const [to , setTo] = useState('inr');
 
+  useEffect(()=>{
+    setFrom(from)
+    setTo(to)
+  },[window])
+  
   const currencyInfo = useCurrencyInfo(from)
 
   const option = Object.keys(currencyInfo);
