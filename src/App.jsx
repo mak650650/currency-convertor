@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Navbar from "./Component/Navbar"
 import Inputbox from "./Component/Inputbox"
 import useCurrencyInfo from "./hooks/useCurrencyInfo"
@@ -11,7 +11,7 @@ function App() {
   const [from , setFrom] = useState('jpy');
   const [to , setTo] = useState('inr');
 
-  const currencyInfo = useCurrencyInfo(from);
+  const currencyInfo = useCallback(()=>useCurrencyInfo(from),[from, amount])
 
   const option = Object.keys(currencyInfo);
 
