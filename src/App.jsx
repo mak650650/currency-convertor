@@ -40,11 +40,11 @@ function App() {
     <>
     <div className="w-full  h-screen bg-no-repeat bg-cover bg-center bg-[url('/src/assets/bg.png')]">
   
-      <div className="bg-transparent  text-white flex columns-1">
+      <div className="bg-transparent  text-white flex columns-1 ">
         <Navbar />
       </div>
 
-      <div className="text-white flex-col justify-center text-center mt-20 ">
+      <div className="text-white flex-col justify-center text-center my-32 ">
         <div>
           <h1 className="text-5xl mb-5 max-[1200px]:text-4xl">Free Currency Conversion <span className="text-purple-600">APP</span></h1>
           <span className="text-gray-400 ">The 100% free solution for handling exchange rate conversions.
