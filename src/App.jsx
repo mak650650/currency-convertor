@@ -19,10 +19,14 @@ function App() {
   const onAmountChange = (amount) => {
       setAmount(amount)
   }
-  const onCurrencyChange = (from) => {
+  const onCurrencyChangeOption1= (from) => {
       setFrom(from)
   }
+  const onCurrencyChangeOption2= (to) => {
+      setTo(to)
+  }
   //Swap
+  
   const swap = () => {
     setFrom(to)
     setTo(from)
@@ -30,11 +34,8 @@ function App() {
     setConvertedAmount(amount)
   }
  
-  //Convert
-  
-  useEffect(()=>{
-    
-  },[])
+
+ 
   return (
     <>
     <div className="w-full  h-screen bg-no-repeat bg-cover bg-center bg-[url('/src/assets/bg.png')]">
@@ -56,7 +57,7 @@ function App() {
               label='From' 
               amount={amount} 
               onAmountChange={onAmountChange}
-              onCurrencyChange={onCurrencyChange}
+              onCurrencyChange={onCurrencyChangeOption1}
               currencyOptions={option}
               selectCountry={from}
               amountDisable={false}
@@ -79,7 +80,7 @@ function App() {
               label='   To   ' 
               amount={convertedAmount}
               onAmountChange={onAmountChange}
-              onCurrencyChange={onCurrencyChange}
+              onCurrencyChange={onCurrencyChangeOption2}
               currencyOptions={option}
               selectCountry={to}
               amountDisable={true}
